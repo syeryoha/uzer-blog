@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 	before_action :correct_user, only: :destroy
 	
 	def new
+      @post = Post.new
 	end
 	
 	def create

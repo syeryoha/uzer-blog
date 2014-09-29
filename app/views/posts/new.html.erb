@@ -1,0 +1,11 @@
+<%= form_for @post do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :content %>:
+  <%= f.text_area :content %><br />
+
+  <input type="hidden" name="post[:user_id]" value="<%=current_user.id %>">
+
+  <%= f.submit %>
+<% end %>
